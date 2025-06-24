@@ -1,4 +1,4 @@
-CREATE TABLE public.user_info (
+CREATE TABLE IF NOT EXISTS public.user_info (
     id int NOT NULL,
     username varchar(256) NOT NULL,
     password varchar(256) NOT NULL,

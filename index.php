@@ -1,6 +1,16 @@
 <?php
-require_once __DIR__ . '/handlers/mongodbChecker.handler.php';
-require_once __DIR__ . '/handlers/postgreChecker.handler.php';
+require_once UTILS_PATH . '/auth.util.php';
+requireAuth();
+
+$title = 'Dashboard';
+
+ob_start();
+echo "<h2>You are logged in as " . getCurrentUser()['username'] . "</h2>";
+$content = ob_get_clean();
+
+require LAYOUTS_PATH . '/main.layout.php';
+//require_once __DIR__ . '/handlers/mongodbChecker.handler.php';
+//require_once __DIR__ . '/handlers/postgreChecker.handler.php';
 ?>
 <!-- <!DOCTYPE html>
 <html lang="en">

@@ -1,15 +1,18 @@
-<!-- inclde_once "vendor/autoload.php"; -->
-
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once BASE_PATH . '/bootstrap.php';
+require_once BASE_PATH . '/vendor/autoload.php';
 
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv\Dotenv::createImmutable(BASE_PATH);
 $dotenv->load();
 
-function env($key, $default = null)
-{
-    return $_ENV[$key] ?? $_SERVER[$key] ?? $default;
-}
+$typeConfig = [
+    'envName'    => $_ENV['ENV_NAME'] ?? '',
+    'pgHost'     => $_ENV['PG_HOST'],
+    'pgPort'     => $_ENV['PG_PORT'],
+    'pgDB'       => $_ENV['PG_DB'],
+    'pgUser'     => $_ENV['PG_USER'],
+    'pgPassword' => $_ENV['PG_PASS'],
+    'mongoUri'   => $_ENV['MONGO_URI'],
+    'mongoDB'    => $_ENV['MONGO_DB'],
+];

@@ -87,14 +87,19 @@ AD-ProjectName
 │  └─ js
 │     └─ example.js
 ├─ components
-│  └─ componentGroup
-│     └─ example.component.php
-├─ templates
-│  └─ example.component.php
+│  ├─ componentGroup
+│  │  └─ example.component.php
+│  ├─ templates
+│  │  └─ example.component.php
+│  └─ loginForm.component.php
 ├─ database
-│  └─ nameOfModels.model.sql
+│  ├─ nameOfModels.model.sql
+│  ├─ project_users.model.sql
+│  ├─ projects.model.sql
+│  └─ users.model.sql
 ├─ docs
 │  ├─ vsCode
+│  │  └─ PHP-CI4-AITS.code-profile
 │  ├─ Database VS Code Manual.md
 │  ├─ Docker Manual.md
 │  ├─ Git Commits.md
@@ -105,25 +110,37 @@ AD-ProjectName
 │  ├─ Request.md
 │  └─ VS Code Profile Manual.md
 ├─ errors
-│  └─ errorName.error.php
+│  └─ 404.error.php
 ├─ handlers
+│  ├─ authLogin.handler.php
 │  ├─ example.handler.php
 │  ├─ mongodbChecker.handler.php
 │  └─ postgreChecker.handler.php
 ├─ layouts
-│  └─ example.layout.php
+│  └─ main.layout.php
 ├─ pages
 │  └─ ExamplePage
 │     └─ assets
-│        └─ css
-│           └─ example.css
+│        ├─ css
+│        │  └─ example.css
+│        ├─ img
+│        │  └─ nyebe_white.png
+│        ├─ js
+│        │  └─ example.js
+│        └─ index.php
+│     └─ login.page.php
+│     └─ logout.page.php
 ├─ sql
 │  ├─ New Table Auto Increment Script.sql
-│  ├─ Old Table Auto Increment.sql
-│  └─ user.model.sql
+│  └─ Old Table Auto Increment.sql
 ├─ staticDatas
-│  └─ example.staticData.php
+│  └─ dummies
+│     └─ users.staticData.php
 ├─ utils
+│  ├─ auth.util.php
+│  ├─ dbMigratePostgresql.util.php
+│  ├─ dbResetPostgresql.util.php
+│  ├─ dbSeederPostgresql.util.php
 │  ├─ envSetter.util.php
 │  └─ htmlEscape.util.php
 ├─ vendor
@@ -158,21 +175,21 @@ AD-ProjectName
 │  │     └─ README.md
 │  ├─ phpoption
 │  │  └─ phpoption
-│  │     └─ .github
-│  │        ├─ workflows
-│  │        │   ├─ static.yml
-│  │        │   └─ tests.yml
-│  │        ├─ CODE_OF_CONDUCT.md
-│  │        ├─ CODE_OF_CONDUCT.md
-│  │        ├─ CONTRIBUTING.md
-│  │        ├─FUNDING.yml
-│  │        └─SECURITY.md
-│  │     └─ src
-│  │        └─ PhpOption
-│  │           ├─ LazyOption.php
-│  │           ├─ None.php
-│  │           ├─ Option.php
-│  │           └─ Some.php
+│  │     ├─ .github
+│  │     │  ├─ workflows
+│  │     │  │   ├─ static.yml
+│  │     │  │   └─ tests.yml
+│  │     │  ├─ CODE_OF_CONDUCT.md
+│  │     │  ├─ CODE_OF_CONDUCT.md
+│  │     │  ├─ CONTRIBUTING.md
+│  │     │  ├─FUNDING.yml
+│  │     │  └─SECURITY.md
+│  │     ├─ src
+│  │     │  └─ PhpOption
+│  │     │     ├─ LazyOption.php
+│  │     │     ├─ None.php
+│  │     │     ├─ Option.php
+│  │     │     └─ Some.php
 │  │     └─ tests
 │  │        ├─ PhpOption
 │  │        │  └─ Tests
@@ -188,14 +205,17 @@ AD-ProjectName
 │  │  ├─ polyfill-php80/
 │  ├─ vlucas
 │  └─ autoload.php
+├─ .dockerignore
 ├─ .env
 ├─ .gitignore
 ├─ compose.yaml
+├─ composer
 ├─ composer.json
 ├─ composer.lock
 ├─ Dockerfile
 ├─ index.php
 ├─ README.Docker.md
 ├─ readme.md
-└─ router
+├─ router.php
+└─ workbook activity 3 updated.md
 ```

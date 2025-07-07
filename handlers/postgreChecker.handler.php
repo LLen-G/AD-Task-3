@@ -5,7 +5,7 @@ $host = "host.docker.internal";
 $port = "5555";
 $username = "user";
 $password = "password";
-$dbname = "AD-Task-3";
+$dbname = "ad_task_3";
 
 $conn_string = "host=$host port=$port dbname=$dbname user=$username password=$password";
 
